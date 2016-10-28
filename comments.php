@@ -31,7 +31,7 @@
 
   //Read the file and put the results in the array
   $fh = fopen("comments.txt", "r");
-  echo "<table>";
+  echo "<table border=\"1\">";
   while(!feof($fh)){
     echo "<tr>";
     echo "<td>";
