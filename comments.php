@@ -6,7 +6,9 @@
   $forbidList = [];
   $fh = fopen("comments.txt", "r");
   while(!feof($fh)){
-    array_push($forbidList, fgets($fh));
+    $word = fgets($fh);
+    echo "Word: ".$word;
+    array_push($forbidList, $word);
   }
   fclose($fh);
   echo $forbidList;
