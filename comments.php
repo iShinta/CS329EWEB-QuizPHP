@@ -3,16 +3,14 @@
   $name = $_POST["name"];
   $comment = $_POST["comment"];
 
+  $forbidList = ["damn", "hell", "pox"];
+
   //Look for forbidden words
-  $forbid = false;
-  if(strpos($name, "damn") != false || strpos($comment, "damn") != false){
-    $forbid = true;
-  }
-  if(strpos($name, "hell") != false || strpos($comment, "hell") != false){
-    $forbid = true;
-  }
-  if(strpos($name, "pox") != false || strpos($comment, "pox") != false){
-    $forbid = true;
+  foreach ($forbidList as $key) {
+    if(strpos($name, $key) !== false || strpos($comment, $key) !== false){
+      $forbid = true;
+      break;
+    }
   }
 
   if(!$forbid){
