@@ -23,6 +23,7 @@
   if(!$forbid){
     $fh = fopen("comments.txt", "a");
     fwrite($fh, $name."\n");
+    fwrite($fh, date('r')."\n");
     fwrite($fh, $comment."\n");
     fclose($fh);
   }else{
@@ -32,14 +33,15 @@
   //Read the file and put the results in the array
   $fh = fopen("comments.txt", "r");
   echo "<table border=\"1\">";
-  echo "<tr><th>Name</th><th>Comments</th></tr>";
+  echo "<tr><th>Name</th><th>Date</th><th>Comments</th></tr>";
   while(!feof($fh)){
     $lineName = fgets($fh);
+    $lineDate = fgets($fh);
     $line = fgets($fh);
     if($lineName != "" && $line != ""){
       echo "<tr>";
       echo "<td>".$lineName."</td>";
-
+      echo "<td>".$lineDate."</td>";
       echo "<td>".$line."</td>";
       echo "</tr>";
     }
