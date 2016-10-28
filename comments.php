@@ -16,12 +16,12 @@
   while(!feof($fh)){
     //Read line
     $lineName = fgets($fh);
-    echo $lineName."\n";
+    echo $lineName."<br />";
 
     //Read Name
     $line = fgets($fh);
     $listSignUp[$lineNb] = $line;
-    echo $line."\n";
+    echo $line."<br />";
   }
   fclose($fh);
 ?>
