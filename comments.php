@@ -33,7 +33,20 @@
   $fh = fopen("comments.txt", "r");
   echo "<table>";
   while(!feof($fh)){
-    
+    echo "<tr>";
+    echo "<td>";
+    //Read line
+    $lineName = fgets($fh);
+    echo "Name: ".$lineName;
+    echo "</td>";
+
+    echo "<td>";
+    //Read Name
+    $line = fgets($fh);
+    $listSignUp[$lineNb] = $line;
+    echo "Comment: ".$line;
+    echo "</td>";
+    echo "</tr>";
   }
   echo "</table>";
   fclose($fh);
