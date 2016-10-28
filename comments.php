@@ -36,7 +36,7 @@
   while(!feof($fh)){
     $lineName = fgets($fh);
     $line = fgets($fh);
-    if(){
+    if($lineName != "" && $line != ""){
       echo "<tr>";
       echo "<td>".$lineName."</td>";
 
