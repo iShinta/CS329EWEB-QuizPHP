@@ -7,11 +7,10 @@
   $fh = fopen("forbidden.txt", "r");
   while(!feof($fh)){
     $word = fgets($fh);
-    echo "Word: ".$word."\n";
     array_push($forbidList, $word);
   }
   fclose($fh);
-  //echo $forbidList;
+  echo $forbidList;
 
   //Look for forbidden words
   foreach ($forbidList as $key) {
