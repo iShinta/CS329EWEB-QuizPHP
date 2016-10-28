@@ -4,7 +4,7 @@
   $comment = $_POST["comment"];
 
   $forbidList = [];
-  $fh = fopen("comments.txt", "r");
+  $fh = fopen("forbidden.txt", "r");
   while(!feof($fh)){
     $word = fgets($fh);
     echo "Word: ".$word;
