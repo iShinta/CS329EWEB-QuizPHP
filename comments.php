@@ -7,7 +7,7 @@
   if(strpos($name, "damn") == false){
     $fh = fopen("comments.txt", "a");
     fwrite($fh, $name."\n");
-    fwrite($fh, $comment);
+    fwrite($fh, $comment."\n");
     fclose($fh);
   }
 
