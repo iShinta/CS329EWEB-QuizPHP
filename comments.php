@@ -20,6 +20,8 @@
     fwrite($fh, $name."\n");
     fwrite($fh, $comment."\n");
     fclose($fh);
+  }else{
+    echo "Forbidden word has been found. Comment not registered";
   }
 
   //Read the file and put the results in the array
