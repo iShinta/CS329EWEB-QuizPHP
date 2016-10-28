@@ -5,13 +5,13 @@
 
   //Look for forbidden words
   $forbid = false;
-  if((strpos($name, "damn") || strpos($comment, "damn")) != false){
+  if((strpos($name, "damn") && strpos($comment, "damn")) != false){
     $forbid = true;
   }
-  if((strpos($name, "damn") || strpos($comment, "damn")) != false){
+  if((strpos($name, "hell") && strpos($comment, "hell")) != false){
     $forbid = true;
   }
-  if((strpos($name, "damn") || strpos($comment, "damn")) != false){
+  if((strpos($name, "pox") && strpos($comment, "pox")) != false){
     $forbid = true;
   }
 
