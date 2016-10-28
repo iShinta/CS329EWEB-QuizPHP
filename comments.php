@@ -8,10 +8,10 @@
   if(strpos($name, "damn") != false || strpos($comment, "damn") != false){
     $forbid = true;
   }
-  if(strpos($name, "damn") != false || strpos($comment, "damn") != false){
+  if(strpos($name, "hell") != false || strpos($comment, "hell") != false){
     $forbid = true;
   }
-  if(strpos($name, "damn") != false || strpos($comment, "damn") != false){
+  if(strpos($name, "pox") != false || strpos($comment, "pox") != false){
     $forbid = true;
   }
 
