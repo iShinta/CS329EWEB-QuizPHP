@@ -10,7 +10,7 @@
     array_push($forbidList, $word);
   }
   fclose($fh);
-  echo count($forbidList);
+  $forbidList = ["damn", "hell", "pox"];
 
   //Look for forbidden words
   foreach ($forbidList as $key) {
