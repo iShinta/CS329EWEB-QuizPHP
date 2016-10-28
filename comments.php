@@ -38,6 +38,7 @@
     $lineName = fgets($fh);
     $lineDate = fgets($fh);
     $line = fgets($fh);
+    $temp = fgets($fh);
     if($lineName != "" && $line != ""){
       echo "<tr>";
       echo "<td>".$lineName."</td>";
@@ -45,7 +46,6 @@
       echo "<td>".$line."</td>";
       echo "</tr>";
     }
-    $temp = fgets($fh);
   }
   echo "</table>";
   fclose($fh);
