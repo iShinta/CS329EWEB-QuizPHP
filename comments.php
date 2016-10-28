@@ -34,20 +34,15 @@
   echo "<table border=\"1\">";
   echo "<tr><th>Name</th><th>Comments</th></tr>";
   while(!feof($fh)){
-    echo "<tr>";
-    echo "<td>";
-    //Read line
     $lineName = fgets($fh);
-    echo $lineName;
-    echo "</td>";
-
-    echo "<td>";
-    //Read Name
     $line = fgets($fh);
-    $listSignUp[$lineNb] = $line;
-    echo $line;
-    echo "</td>";
-    echo "</tr>";
+    if(){
+      echo "<tr>";
+      echo "<td>".$lineName."</td>";
+
+      echo "<td>".$line."</td>";
+      echo "</tr>";
+    }
   }
   echo "</table>";
   fclose($fh);
