@@ -4,7 +4,18 @@
   $comment = $_POST["comment"];
 
   //Look for forbidden words
-  if(strpos($name, "damn") == false){
+  $forbid = false;
+  if(strpos($name, "damn") != false){
+    $forbid = true;
+  }
+  if(strpos($name, "hell") != false){
+    $forbid = true;
+  }
+  if(strpos($name, "pox") != false){
+    $forbid = true;
+  }
+
+  if(!$forbid){
     $fh = fopen("comments.txt", "a");
     fwrite($fh, $name."\n");
     fwrite($fh, $comment."\n");
