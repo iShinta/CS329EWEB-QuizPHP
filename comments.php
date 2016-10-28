@@ -5,4 +5,9 @@
 
   $comment = $_POST["comment"];
   echo "Comment: ".$comment;
+
+  $fh = fopen("comments.txt", "a");
+  fwrite($fh, $name);
+  fwrite($fh, $comment);
+  fclose($fh);
 ?>
