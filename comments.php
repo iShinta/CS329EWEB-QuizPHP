@@ -24,7 +24,7 @@
     $fh = fopen("comments.txt", "a");
     fwrite($fh, $name."\n");
     fwrite($fh, date('r')."\n");
-    fwrite($fh, $comment."\n");
+    fwrite($fh, $comment."\n\n");
     fclose($fh);
   }else{
     echo "Forbidden word has been found. Comment not registered<br /><br />";
@@ -45,6 +45,7 @@
       echo "<td>".$line."</td>";
       echo "</tr>";
     }
+    $temp = fgets($fh);
   }
   echo "</table>";
   fclose($fh);
