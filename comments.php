@@ -16,7 +16,7 @@
   while(!feof($fh)){
     //Read line
     $lineName = fgets($fh);
-    echo "<br />--Comment--<br />;
+    echo "<br />--Comment--<br />";
     echo "Name: ".$lineName."<br />";
 
     //Read Name
