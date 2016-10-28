@@ -1,13 +1,27 @@
 <h2>Thank you for signing the Guestbook!</h2>
 <?php
   $name = $_POST["name"];
-  echo "Name: ".$name;
-
   $comment = $_POST["comment"];
-  echo "Comment: ".$comment;
 
-  $fh = fopen("comments.txt", "a");
-  fwrite($fh, $name);
-  fwrite($fh, $comment);
+  //Look for forbidden words
+  if(strpos($name, "damn") == false){
+    $fh = fopen("comments.txt", "a");
+    fwrite($fh, $name."\n");
+    fwrite($fh, $comment);
+    fclose($fh);
+  }
+
+  //Read the file and put the results in the array
+  $fh = fopen("comments.txt", "r");
+  while(!feof($fh)){
+    //Read line
+    $lineName = fgets($fh);
+    echo $lineName;
+
+    //Read Name
+    $line = fgets($fh);
+    $listSignUp[$lineNb] = $line;
+    echo $line;
+  }
   fclose($fh);
 ?>
