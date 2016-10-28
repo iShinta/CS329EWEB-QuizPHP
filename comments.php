@@ -3,7 +3,13 @@
   $name = $_POST["name"];
   $comment = $_POST["comment"];
 
-  $forbidList = ["damn", "hell", "pox"];
+  $forbidList = [];
+  $fh = fopen("comments.txt", "r");
+  while(!feof($fh)){
+    array_push($forbidList, fgets($fh));
+  }
+  fclose($fh);
+  echo $forbidList;
 
   //Look for forbidden words
   foreach ($forbidList as $key) {
