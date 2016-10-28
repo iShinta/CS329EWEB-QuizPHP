@@ -32,19 +32,20 @@
   //Read the file and put the results in the array
   $fh = fopen("comments.txt", "r");
   echo "<table border=\"1\">";
+  echo "<tr><th>Name</th><th>Comments</th></tr>";
   while(!feof($fh)){
     echo "<tr>";
     echo "<td>";
     //Read line
     $lineName = fgets($fh);
-    echo "Name: ".$lineName;
+    echo $lineName;
     echo "</td>";
 
     echo "<td>";
     //Read Name
     $line = fgets($fh);
     $listSignUp[$lineNb] = $line;
-    echo "Comment: ".$line;
+    echo $line;
     echo "</td>";
     echo "</tr>";
   }
